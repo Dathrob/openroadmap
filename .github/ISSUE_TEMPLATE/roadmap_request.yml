@@ -1,0 +1,11 @@
+name: Roadmap request
+description: Suggest a subject for the community
+body:
+  - type: input
+    id: subject
+    attributes:
+      label: Subject
+  - type: textarea
+    id: context
+    attributes:
+      label: Why is it useful and what resources do you suggest?

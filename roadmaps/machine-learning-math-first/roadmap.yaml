@@ -1,0 +1,83 @@
+spec: openroadmap/v0.1
+id: machine-learning-math-first
+title: Math-First ML Engineer
+description: A community-curated path from programming foundations to production machine learning.
+subject: { id: machine-learning-engineer, title: Machine Learning Engineer, keywords: [machine learning, mathematics] }
+categories: [technology, artificial-intelligence]
+version: 1.0.0
+difficulty: { from: beginner, to: advanced }
+estimated_hours: 450
+authorship: { type: ai }
+models: [{ provider: documented fixture, name: external-authoring-model, version: "fixture-1", generated_at: "2026-09-25" }]
+authors:
+  - { name: OpenRoadmap contributors, github: openroadmap }
+verification: { status: verified }
+updated_at: '2026-09-25'
+sections:
+  - id: programming
+    title: Programming Foundations
+    order: 1
+    topics:
+      - id: python
+        title: Python for ML
+        resources:
+          - { title: Machine Learning Zoomcamp, provider: DataTalksClub, url: 'https://github.com/DataTalksClub/machine-learning-zoomcamp', type: course, format: mixed, cost: free, recommended: true }
+          - { title: Python Documentation, provider: Python, url: 'https://docs.python.org/3/', type: documentation, format: text, cost: free }
+  - id: mathematics
+    title: Mathematics Foundations
+    order: 2
+    depends_on: [programming]
+    topics:
+      - id: linear-algebra
+        title: Linear Algebra and Probability
+        resources:
+          - { title: Mathematics for Machine Learning, provider: Imperial College London, url: 'https://www.coursera.org/specializations/mathematics-machine-learning', type: course, format: mixed, cost: freemium, recommended: true }
+          - { title: Essence of Linear Algebra, provider: 3Blue1Brown, url: 'https://www.3blue1brown.com/topics/linear-algebra', type: video, format: video, cost: free }
+  - id: fundamentals
+    title: Machine Learning Fundamentals
+    order: 3
+    depends_on: [mathematics]
+    topics:
+      - id: supervised-learning
+        title: Supervised Learning and Evaluation
+        resources:
+          - { title: Machine Learning Zoomcamp, provider: DataTalksClub, url: 'https://github.com/DataTalksClub/machine-learning-zoomcamp', type: course, format: mixed, cost: free, recommended: true }
+          - { title: Hands-On Machine Learning, provider: O'Reilly, url: 'https://github.com/ageron/handson-ml3', type: book, format: text, cost: paid }
+  - id: deep-learning
+    title: Deep Learning
+    order: 4
+    depends_on: [fundamentals]
+    topics:
+      - id: practical-deep-learning
+        title: Practical Deep Learning
+        resources:
+          - { title: Practical Deep Learning for Coders, provider: fast.ai, url: 'https://course.fast.ai/', type: course, format: video, cost: free, recommended: true }
+          - { title: Full Stack Deep Learning, provider: FSDL, url: 'https://fullstackdeeplearning.com/', type: course, format: mixed, cost: free }
+  - id: neural-networks
+    title: Neural Networks
+    order: 5
+    depends_on: [deep-learning]
+    topics:
+      - id: neural-network-internals
+        title: Backpropagation and Language Models
+        resources:
+          - { title: Zero to Hero, provider: Andrej Karpathy, url: 'https://github.com/karpathy/nn-zero-to-hero', type: course, format: video, cost: free, recommended: true }
+  - id: transformers
+    title: Transformers and LLMs
+    order: 6
+    depends_on: [neural-networks]
+    topics:
+      - id: transformer-ecosystem
+        title: Transformers, Fine-tuning, and RAG
+        resources:
+          - { title: LLM Course, provider: Hugging Face, url: 'https://huggingface.co/learn/llm-course/chapter1/1', type: course, format: mixed, cost: free, recommended: true }
+  - id: production
+    title: Production ML and MLOps
+    order: 7
+    depends_on: [fundamentals]
+    topics:
+      - id: mlops
+        title: Reliable ML Systems
+        resources:
+          - { title: Made With ML, provider: Made With ML, url: 'https://madewithml.com/', type: course, format: mixed, cost: free, recommended: true }
+          - { title: Full Stack Deep Learning, provider: FSDL, url: 'https://fullstackdeeplearning.com/', type: course, format: mixed, cost: free }

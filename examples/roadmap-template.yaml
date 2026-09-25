@@ -1,0 +1,25 @@
+spec: openroadmap/v0.1
+id: example-roadmap
+title: Example Roadmap
+description: A short description of the learning goal.
+subject: { id: example-subject, title: Example Subject }
+categories: [technology]
+version: 1.0.0
+authorship: { type: human }
+authors: [{ name: Your Name, github: your-handle }]
+sections:
+  - id: foundations
+    title: Foundations
+    order: 1
+    topics:
+      - id: first-topic
+        title: First Topic
+        resources:
+          - { title: Recommended resource, url: 'https://example.com/course', type: course, format: mixed, cost: free, recommended: true }
+          - { title: Alternative resource, url: 'https://example.com/book', type: book, format: text, cost: paid }
+  - id: next-step
+    title: Next Step
+    order: 2
+    depends_on: [foundations]
+    topics: []
+# For ai or hybrid authorship, add models with provider, name, version, and generated_at.

@@ -1,0 +1,2 @@
+import { getRoadmaps, getSubjects } from '../lib/roadmaps'; import type { MetadataRoute } from 'next';
+export default function sitemap(): MetadataRoute.Sitemap { const base='https://openroadmap.vercel.app'; const staticRoutes=['','/roadmaps','/categories','/docs','/docs/create-roadmap','/docs/ai-authoring','/docs/specification','/docs/architecture','/guide']; return [...staticRoutes.map(path=>({url:base+path})),...getRoadmaps().map(r=>({url:`${base}/roadmaps/${r.id}`})),...getSubjects().map(x=>({url:`${base}/subjects/${x.subject.id}`}))]; }
