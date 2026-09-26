@@ -4,8 +4,8 @@
 
 OpenRoadmap is an open-source standard and directory for structured learning roadmaps. It organizes external resources into transparent paths for anything learnable. It is not an LMS, course provider, chatbot, or hosted AI generator.
 
-- [Website](https://openroadmap.vercel.app)
-- [Contributor Guide](https://openroadmap.vercel.app/guide)
+- [Website](https://openroadmapai.vercel.app)
+- [Contributor Guide](https://openroadmapai.vercel.app/guide)
 - [Contribution rules](CONTRIBUTING.md)
 - [Specification](docs/SPEC.md)
 
