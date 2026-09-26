@@ -1,0 +1,102 @@
+spec: openroadmap/v0.1
+id: ml-ai-engineer
+title: ML/AI Engineer
+description: A structured path for software engineers who want to build, evaluate, and operate machine learning and AI systems.
+subject:
+  id: ml-ai-engineer
+  title: ML/AI Engineer
+  keywords: [machine learning, artificial intelligence, deep learning, MLOps]
+categories: [technology, artificial-intelligence, career]
+keywords: [Python, machine learning, neural networks, transformers, production]
+version: 1.0.0
+difficulty: { from: intermediate, to: advanced }
+estimated_hours: 320
+authorship: { type: ai }
+models:
+  - { provider: OpenAI, name: Codex, version: GPT-5, generated_at: '2026-09-26' }
+verification: { status: unverified }
+updated_at: '2026-09-26'
+sections:
+  - id: software-foundations
+    title: Software Foundations for ML
+    order: 1
+    topics:
+      - id: python-data-tools
+        title: Python and Data Tools
+        resources:
+          - { title: Python Tutorial, provider: Python Software Foundation, url: 'https://docs.python.org/3/tutorial/', type: documentation, format: text, cost: free, recommended: true, description: Official Python language tutorial and reference starting point. }
+          - { title: NumPy User Guide, provider: NumPy, url: 'https://numpy.org/doc/stable/user/', type: documentation, format: text, cost: free }
+      - id: software-engineering
+        title: Software Engineering Practice
+        resources:
+          - { title: Pro Git, provider: Git, url: 'https://git-scm.com/book/en/v2', type: book, format: text, cost: free, recommended: true, description: Free reference for version control and collaborative software workflows. }
+  - id: mathematics
+    title: Mathematics and Statistics
+    order: 2
+    depends_on: [software-foundations]
+    topics:
+      - id: linear-algebra
+        title: Linear Algebra
+        resources:
+          - { title: Essence of Linear Algebra, provider: 3Blue1Brown, url: 'https://www.3blue1brown.com/topics/linear-algebra', type: video, format: video, cost: free, recommended: true, description: 'Visual introduction to vectors, matrices, and linear transformations.' }
+          - { title: Mathematics for Machine Learning, provider: Cambridge University Press, url: 'https://mml-book.github.io/', type: book, format: text, cost: free }
+      - id: probability-statistics
+        title: Probability and Statistics
+        resources:
+          - { title: Introduction to Probability, provider: Harvard Online, url: 'https://pll.harvard.edu/course/statistics-110-probability', type: course, format: video, cost: free, recommended: true, description: University-level introduction to probability concepts and reasoning. }
+  - id: machine-learning
+    title: Machine Learning Fundamentals
+    order: 3
+    depends_on: [mathematics]
+    topics:
+      - id: supervised-learning
+        title: Supervised Learning and Evaluation
+        resources:
+          - { title: Machine Learning Zoomcamp, provider: DataTalksClub, url: 'https://github.com/DataTalksClub/machine-learning-zoomcamp', type: course, format: mixed, cost: free, recommended: true, description: Practical course focused on building and deploying machine learning systems. }
+          - { title: An Introduction to Statistical Learning, provider: ISLR, url: 'https://www.statlearning.com/', type: book, format: text, cost: free }
+      - id: scikit-learn
+        title: Modeling with Scikit-learn
+        resources:
+          - { title: Scikit-learn User Guide, provider: Scikit-learn, url: 'https://scikit-learn.org/stable/user_guide.html', type: documentation, format: text, cost: free, recommended: true, description: 'Official algorithms, model selection, and evaluation documentation.' }
+  - id: deep-learning
+    title: Deep Learning and Neural Networks
+    order: 4
+    depends_on: [machine-learning]
+    topics:
+      - id: practical-deep-learning
+        title: Practical Deep Learning
+        resources:
+          - { title: Practical Deep Learning for Coders, provider: fast.ai, url: 'https://course.fast.ai/', type: course, format: video, cost: free, recommended: true, description: Hands-on deep learning course organized around working models. }
+          - { title: Deep Learning Specialization, provider: DeepLearning.AI, url: 'https://www.deeplearning.ai/courses/deep-learning-specialization/', type: course, format: mixed, cost: freemium }
+      - id: neural-network-internals
+        title: Backpropagation and Language Models
+        resources:
+          - { title: Zero to Hero, provider: Andrej Karpathy, url: 'https://github.com/karpathy/nn-zero-to-hero', type: course, format: video, cost: free, recommended: true, description: Build neural network and language model fundamentals from first principles. }
+  - id: generative-ai
+    title: Transformers and Generative AI
+    order: 5
+    depends_on: [deep-learning]
+    topics:
+      - id: transformers
+        title: Transformers and Language Models
+        resources:
+          - { title: Large Language Models Course, provider: Hugging Face, url: 'https://huggingface.co/learn/llm-course/chapter1/1', type: course, format: mixed, cost: free, recommended: true, description: Open course covering transformer models and the surrounding ecosystem. }
+          - { title: The Illustrated Transformer, provider: Jay Alammar, url: 'https://jalammar.github.io/illustrated-transformer/', type: article, format: text, cost: free }
+      - id: retrieval
+        title: Retrieval-Augmented Generation
+        resources:
+          - { title: Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks, provider: Facebook AI Research, url: 'https://arxiv.org/abs/2005.11401', type: article, format: text, cost: free, recommended: true, description: Research paper introducing a retrieval-augmented generation approach. }
+  - id: production
+    title: Production ML and MLOps
+    order: 6
+    depends_on: [machine-learning]
+    topics:
+      - id: ml-systems
+        title: Designing ML Systems
+        resources:
+          - { title: Full Stack Deep Learning, provider: FSDL, url: 'https://fullstackdeeplearning.com/', type: course, format: mixed, cost: free, recommended: true, description: Course on the lifecycle of building and operating ML-powered products. }
+          - { title: Made With ML, provider: Made With ML, url: 'https://madewithml.com/', type: course, format: mixed, cost: free }
+      - id: deployment-observability
+        title: Deployment and Observability
+        resources:
+          - { title: MLflow Documentation, provider: MLflow, url: 'https://mlflow.org/docs/latest/ml/tracking/', type: documentation, format: text, cost: free, recommended: true, description: Documentation for tracking experiments and managing model lifecycle workflows. }
