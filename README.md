@@ -4,24 +4,22 @@
 
 OpenRoadmap is an open-source standard and directory for structured learning roadmaps. It organizes external resources into transparent paths for anything learnable. It is not an LMS, course provider, chatbot, or hosted AI generator.
 
-- Website: [openroadmap.vercel.app](https://openroadmap.vercel.app)
-- [Documentation](docs/SPEC.md) · [Contributor guide](/guide) · [Contributing](CONTRIBUTING.md)
+- [Website](https://openroadmap.vercel.app)
+- [Contributor Guide](https://openroadmap.vercel.app/guide)
+- [Contribution rules](CONTRIBUTING.md)
+- [Specification](docs/SPEC.md)
 
-## Quick start
+Anyone can contribute a roadmap through a fork and pull request. Trusted Repository Contributors may work from branches in the canonical repository, but every change still reaches `main` through pull request, CI, and maintainer review.
 
 ```bash
 npm install
 npm run dev
 ```
 
-Validate every roadmap with `npm run validate`. Roadmaps live in `roadmaps/<slug>/roadmap.yaml`; use `examples/roadmap-template.yaml`. AI and hybrid contributions must disclose provider, model, version, and generation date.
-
-## Architecture
-
-YAML → JSON Schema → validator → parser → static registry → Next.js pages. GitHub pull requests are the content workflow; no database or secrets are required.
+Validate roadmaps with `npm run validate`. See the [roadmap template](examples/roadmap-template.yaml). AI and Hybrid contributions must disclose truthful provenance.
 
 ## Maintainer
 
-@dathrob ([dathrob](https://github.com/dathrob)).
+Created by [@dathrob](https://github.com/dathrob).
 
 Licensed under Apache-2.0.
